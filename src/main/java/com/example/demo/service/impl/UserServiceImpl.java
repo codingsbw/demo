@@ -26,14 +26,14 @@ public class UserServiceImpl implements UserService {
 	private SysUserMapperCustom userMapperCustom;
 
 	@Override
-//	@Transactional(propagation = Propagation.REQUIRED)
+	@Transactional(propagation = Propagation.REQUIRED)
 	public void saveUser(SysUser user) throws Exception {
 
-//		try {
-//			Thread.sleep(4000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		userMapper.insert(user);
 	}
